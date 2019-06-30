@@ -84,7 +84,7 @@ const crawler = async () => {
     webtoonUrl = webtoonUrl.replace('list.nhn', 'detail.nhn');
 
     let array = new Array(+lastNo);
-    for(let i=0; i<array.length; i++){
+    for(let i=1; i<=array.length; i++){
         await saveImagesByChapter(webtoonUrl, i);
         console.log(`chapter: ${i} Done`);
     }
